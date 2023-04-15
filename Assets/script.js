@@ -18,6 +18,15 @@
   // prompt for password length --> stored in a variable
   var passwordLength= getpasswordLength();
   // Validate the user input --> if user chooses <8 or >128, alert that they need to choose a valid password length, then they're going to need to restart OR call the function that prompts for length again
+  function getPasswordLength(){
+    var userSelect = 0;
+    while((userSelect < 8)|| (userSelect > 128)){
+      userSelect =parseInt(prompt("choose a character between 8 and 128:"));
+      if(isNaN(userSelect)){
+        userSelect= 0;
+      }
+    }
+  }
   // prompt --> Do they want uppercase letters?
   // prompt --> Do they want lowercase letters?
   // prompt --> Do they want numbers?
