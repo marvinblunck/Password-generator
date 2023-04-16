@@ -1,4 +1,5 @@
 // Assignment code here
+var arraySelect= []
 // Need the following variables:
     // selected length of the password
     // array of lowercase letters
@@ -7,13 +8,13 @@
     // array of special characters
     // to hold the password we're building
     // possibly the mega-array
-    function generatePassword(){
+    
       var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
       var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
       var numbers = ["0", "1", "2", "3","4", "5", "6", "7", "8", "9"];
       var special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
-      var arraySelect= []
-    }    
+      
+       
 
   // prompt for password length --> stored in a variable
   var passwordLength= getpasswordLength();
@@ -27,10 +28,25 @@
       }
     }
   }
+  
   // prompt --> Do they want uppercase letters?
+  if (confirm("Would you like uppercase letters in your password?")){
+  arraySelect=arraySelect.concat(uppercase);
+  }
   // prompt --> Do they want lowercase letters?
+  if (confirm("Would you like lowercase letters in your password?")){
+  arraySelect=arraySelect.concat(lowercase);
+  }
   // prompt --> Do they want numbers?
+  if (confirm("Would you like numbers letters in your password?")){
+  arraySelect=arraySelect.concat(numbers);
+  }
   // prompt --> Do they want special characters?
+  if (confirm("Would you like special letters in your password?")){
+  arraySelect=arraySelect.concat(special);
+  }
+  return true;
+
   // Validate that the user has chosen at least one character set --> if not, either have them start over OR recursively call the function that prompts for the character sets
   // With each of those prompts, you need an array of those character types
     // There needs to be at least one of each selected character type included in the password
