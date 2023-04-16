@@ -1,4 +1,5 @@
 // Assignment code here
+var characterLength = 8;
 var arraySelect= []
 // Need the following variables:
     // selected length of the password
@@ -20,12 +21,11 @@ var arraySelect= []
   var passwordLength= getpasswordLength();
   // Validate the user input --> if user chooses <8 or >128, alert that they need to choose a valid password length, then they're going to need to restart OR call the function that prompts for length again
   function getPasswordLength(){
-    var userSelect = 0;
-    while((userSelect < 8)|| (userSelect > 128)){
-      userSelect =parseInt(prompt("choose a character between 8 and 128:"));
-      if(isNaN(userSelect)){
-        userSelect= 0;
-      }
+    characterLength = parseInt(prompt("How many characters do you want your password to be? 8-128?"));
+
+    if(isNan(characterLength) || characterLength < 8 ||characterLength > 128) {
+      alert("Character length has to be between 8-128");
+      return false;
     }
   }
   
