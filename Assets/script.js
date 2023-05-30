@@ -8,7 +8,6 @@ function generatePassword() {
   var passwordLength = getPasswordLength();
 
   if (passwordLength === null) {
-    // Handle the case where the user cancels the password length prompt
     return '';
   }
 //chat gpt helped create a break switch to run the code
@@ -63,7 +62,6 @@ function getSelect(currentChoice) {
     var userSelect = prompt(messagePrompt);
 
     if (userSelect === null) {
-      // Handle the case where the user cancels the prompt
       return false;
     }
 
@@ -74,7 +72,6 @@ function getSelect(currentChoice) {
     } else if (userSelect === 'no') {
       return false;
     } else {
-      // Prompt again if the user enters an invalid response
       alert('Invalid input. Please enter "yes" or "no".');
     }
   }
