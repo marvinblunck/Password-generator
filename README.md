@@ -10,7 +10,10 @@ In challenge three we were given starter code and what we were meant to do is bu
 ## install
 N/A
 ## usage
-Click the link to access the generator. Click the generate password button to be prompted the questions that you can answer to recieve a new unique password. To answer the prompted questions you have to type yes or no to move through the questions.
+Click the link to access the generator: https://marvinblunck.github.io/Password-generator/
+
+ Click the generate password button to be prompted the questions that you can answer to recieve a new unique password. To answer the prompted questions you have to type yes or no to move through the questions.
+
 What it looks like:
 ![Password generator overview](./Assets/image/passwordgenerator.png)
 ## contribution
